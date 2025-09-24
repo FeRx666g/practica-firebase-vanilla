@@ -1,5 +1,5 @@
 import { auth } from "../configFirebase";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
 
 const btnGoogle = document.querySelector("#btnGoogle");
 
