@@ -1,0 +1,29 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4000
+    },
+    "singleProjectMode": true,
+    "auth": {
+      "port": 9099,
+      "options": {
+        "testPhoneNumbers": {
+          "+593994622454": "123456",
+          "+593123456789": "654321"
+        }
+      }
+    }
+  }
+}

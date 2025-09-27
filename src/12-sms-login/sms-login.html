@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login con SMS</title>
+    <script src="./main.js" type="module" defer></script>
+    
+</head>
+<body>
+    <h1>Login con SMS</h1>
+    <br>
+    <form id="formTelefono">
+        <label>Teléfono</label>
+        <input type="text" name="telefono">
+        <div id="recaptcha-container"></div>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <form id="formVerificar">
+
+        <input type="text" name="codigo" placeholder="Código recibido.">
+        <button type="submit">Verificar</button>
+    </form>
+    <br>
+    <a href="/index.html">Inicio</a>
+</body>
+</html>
