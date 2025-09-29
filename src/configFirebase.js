@@ -1,15 +1,15 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { connectAuthEmulator, getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://support.google.com/firebase/answer/7015592
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAuzKhUIeNghybVfygPyxJssurR7SgCptY",
   authDomain: "fir-udemy-3c69a.firebaseapp.com",
   projectId: "fir-udemy-3c69a",
-  storageBucket: "fir-udemy-3c69a.firebasestorage.app",
+  storageBucket: "fir-udemy-3c69a.appspot.com",
   messagingSenderId: "614016508281",
   appId: "1:614016508281:web:83770ea024af48c9138fa8"
 };
@@ -17,14 +17,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
+//export const auth = getAuth(app);
 
-// Detectar local o Workstations y conectar al emulador
-if (
-  location.hostname === "localhost" ||
-  location.hostname.includes("cloudworkstations.dev")
-) {
-  //connectAuthEmulator(auth, "http://127.0.0.1:9099");
-}
-
-export {auth};
+// Initialize Cloud Firestore and get a reference to the service
+export const db = getFirestore(app);
